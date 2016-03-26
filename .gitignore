@@ -2,6 +2,7 @@
 # WordPress Ignore
 #################################################
 *.log
+.DS_Store
 .htaccess
 sitemap.xml
 sitemap.xml.gz
@@ -13,8 +14,10 @@ wp-content/blogs.dir/
 wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
+wp-content/plugins/
 wp-content/wp-cache-config.php
 wp-includes/
+
 
 # NetBeans specific #
 nbproject/private/
