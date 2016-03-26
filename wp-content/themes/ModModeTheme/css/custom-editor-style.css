@@ -1,0 +1,78 @@
+body#tinymce.wp-editor { 
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 10px; 
+    /*background-color: pink;*/
+}
+
+body#tinymce.wp-editor a {
+    color: #4CA6CF;
+}
+
+
+
+body {
+   background-color: #F8F8F8;
+}
+..col-md-3 {
+   float:left;
+   width:66%;
+   padding:1%;
+   border: 1px dotted #ccc;
+   background: #fff;
+}
+.content-col-main {
+   float:left;
+   width:66%;
+   padding:1%;
+   border: 1px dotted #ccc;
+   background: #fff;
+}
+
+.content-col-side {
+   float:right;
+   width:29%;
+   padding:1%;
+   border: 1px dotted #ccc;
+   background: #fff;
+}
+
+.content-col-main-odd {
+   float:right !important;
+   width:66%;
+   padding:1%;
+   border: 1px dotted #ccc;
+   background: #fff;
+}
+
+.content-col-side-odd {
+   float:left;
+   width:29%;
+   padding:1%;
+   border: 1px dotted #ccc;
+   background: #fff;
+}
+.row.featurette {
+    clear: both;
+    overflow: auto;
+    width: 100%;
+}
+.content-col-side img, .content-col-side-odd img { /* Makes sure your images stay within their columns */
+   max-width: 100%;
+   width: auto;
+   height: auto;
+}
+
+.col-md-3 {
+	background: #FFFFFF;
+    border: 1px dotted #CCCCCC;
+    float: left;
+    padding: 1%;
+    width: 22.7%;
+}
+.col-md-3 img {
+    max-width: 100%;
+    width: auto;
+   	height: auto;
+}
+
+
