@@ -1,0 +1,666 @@
+/**
+ * Overrides for Wordpresss to improve integration xxx
+ * 
+ * @author Matthias Thom | http://upplex.de
+ * @package upBootWP 0.1
+ */
+/**
+ * Overrides for Wordpresss to improve integration
+ * 
+ * @author Matthias Thom | http://upplex.de
+ * @package upBootWP 0.1
+ */
+/* imported customize-bootstrap.less */
+/* here you should use whatever @font-face squirrel generated in the stylesheet.css */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+body {
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+.company-logo {
+  max-width: 420px;
+  width: 100%;
+}
+/*********************************
+ * Header Area
+ ********************************/
+.navbar {
+  margin-bottom: 0;
+}
+.navbar a.logo-link {
+  float: left;
+}
+.navbar-toggle {
+  margin: 15px 0 0;
+}
+/*********************************
+ * ADMIN sTUFF
+ ********************************/
+body.page.admin-bar .navbar {
+  margin-top: 32px;
+}
+body.blog.admin-bar {
+  margin-top: 102px;
+}
+body.page {
+  margin-top: 102px;
+}
+.comment-edit-link,
+.comment-edit-link:hover,
+.comment-edit-link:focus {
+  color: #FFFFFF;
+}
+.post-edit-link,
+.post-edit-link:hover,
+.post-edit-link:focus {
+  color: #FFFFFF;
+}
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  margin: 0 auto;
+}
+.image-page .col-md-12.entry-attachment {
+  text-align: center;
+}
+.image-page .entry-caption {
+  padding: 1em;
+}
+/*********************************
+ * Featurette row styles
+ ******************************/
+.img-center-block {
+  overflow: auto;
+  width: 100%;
+}
+.row.acf-featurette {
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 6em;
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+.acf-label,
+.acf-desc,
+.acf-link {
+  overflow: auto;
+  width: 100%;
+}
+.acf-label .img-responsive {
+  max-width: 375px;
+}
+.acf-desc {
+  margin-bottom: 2em;
+}
+.acf-desc .lead {
+  font-weight: 400;
+}
+.row.featurette {
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 3em;
+  margin-bottom: 3em;
+}
+.col-md-5.content-col-side-odd {
+  float: left !important;
+}
+.col-md-7.content-col-main-odd {
+  float: right;
+}
+/**
+ * Widgets
+ */
+.widget ul li {
+  list-style: none;
+}
+.col-nav-next {
+  float: right;
+}
+/**
+ * Buttons
+ */
+.edit-link {
+  background-color: #5CB85C;
+  border-color: #4CAE4C;
+  color: #FFFFFF;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+.edit-link:hover,
+.edit-link:focus {
+  background-color: #47A447;
+  border-color: #398439;
+  color: #FFFFFF;
+}
+/**********************************
+ * ******  Bootstrap Columns ******
+ *********************************/
+.col-md-5 {
+  text-align: center;
+}
+.col-md-12.image-navigation {
+  margin: 20px 0;
+}
+.col-lg-4.center-block {
+  text-align: center;
+  padding-bottom: 2em;
+}
+/*************************************************
+ *  Customize WordPress CSS
+ *************************************************/
+.archive .hfeed.site {
+  margin-top: 150px;
+}
+.single .hfeed.site {
+  margin-top: 150px;
+}
+.blog .hfeed.site {
+  margin-top: 150px;
+}
+.blog .post {
+  margin-bottom: 60px;
+}
+.blog .entry-summary img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.page-header {
+  border-bottom: none;
+  overflow: auto;
+}
+.entry-title {
+  height: auto;
+}
+.entry-title > a {
+  display: block;
+}
+.entry-content {
+  height: auto;
+  max-width: 1170px;
+  overflow: auto;
+}
+.pull-right {
+  margin-left: 2em;
+}
+.nav-next {
+  text-align: right;
+}
+.entry-date.published {
+  margin-right: 10px;
+}
+/*************************************************
+ *  Customize Breadcrumb
+ *************************************************/
+.breadcrumb {
+  margin-top: 20px;
+}
+/*************************************************
+ *  Customize left/right Sidebar - Secondary section well
+ *************************************************/
+#secondary.widget-area.well.well-sm {
+  margin-top: 20px;
+}
+/*************************************************
+ *  Customize Featurettes
+ *************************************************/
+hr.featurette-divider {
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+.container.marketing .row.featurette {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.container.marketing .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.container.not-found {
+  margin-top: 130px;
+}
+.container.product .lead {
+  font-size: 15px;
+  text-align: justify;
+}
+.featurette-heading {
+  color: #3276B1;
+}
+.featurette .lead {
+  font-weight: 400;
+  font-size: 18px;
+}
+.tags-links {
+  margin: 0 15px 0 15px;
+}
+.cat-links {
+  margin: 0 15px 0 0;
+}
+.rowpost-navigation,
+.rowpaging-navigation {
+  margin: 0 0 20px;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.carousel.slide.container {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0px;
+}
+.carousel .item {
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.carousel .active.left,
+.carousel .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+}
+.carousel .next,
+.carousel .prev {
+  left: 0;
+  opacity: 1;
+  z-index: 1;
+}
+.carousel-inner > .item > img {
+  margin-left: 0;
+  width: 100%;
+}
+.carousel-control {
+  width: 10%;
+  z-index: 500;
+}
+.carousel-control .icon-prev,
+.carousel-control .glyphicon-chevron-left {
+  left: 25%;
+}
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-right {
+  right: 25%;
+}
+.carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  overflow: auto;
+  top: 0;
+  z-index: 10;
+  padding: 1% 10%;
+  text-align: left;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.85);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#85000000, endColorstr=#85000000)";
+}
+.carousel-caption .btn {
+  text-shadow: none;
+}
+.carousel-indicators {
+  bottom: 10px;
+  left: 0;
+  list-style: none outside none;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 80%;
+  z-index: 15;
+}
+/**********************************************
+ * Jumbotron container arround Image Carousel Widget
+ *********************************************/
+.jumbotron {
+  padding: 0px;
+  margin-bottom: 0px;
+  font-size: 25px;
+  font-weight: 200;
+  line-height: 2.14285714;
+  color: inherit;
+  background-color: #1c1c1c;
+}
+.jumbotron .site-header .container {
+  max-width: 1770px;
+  padding: 0;
+  width: 100%;
+}
+.jumbotron h1 {
+  line-height: 1;
+  color: inherit;
+  font-size: 20px;
+  margin-top: 0;
+}
+.jumbotron p {
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+/**********************************************
+ * Main Nav Menu
+ *********************************************/
+.logo {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  float: left;
+}
+.modeLogo {
+  display: block;
+  float: left;
+  margin: 10px auto;
+}
+/************************************************
+ * Navbar Styling 
+ ***********************************************/
+.navbar-header {
+  margin: 10px;
+}
+.navbar-default {
+  background-color: #000;
+  border-color: #1F93C6;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  font-weight: 600;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: #222222;
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: #222222;
+  color: #1F93C6;
+}
+.navbar-default .navbar-nav > .dropdown > a .caret {
+  border-bottom-color: #FFFFFF;
+  border-top-color: #FFFFFF;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret {
+  border-bottom-color: #1F93C6;
+  border-top-color: #1F93C6;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #333333;
+  color: #1F93C6;
+}
+.dropdown-menu {
+  background-color: #333333;
+}
+.dropdown-menu > li > a {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #222222;
+  color: #1F93C6;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #1F93C6;
+}
+.navbar-default .navbar-toggle {
+  border: 2px solid #1F93C6;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #333333;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #1F93C6;
+}
+/************************************************
+ * Footer Styling 
+ ***********************************************/
+footer {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+footer.footer {
+  background-color: #eeeeee;
+}
+.site-info {
+  padding: 9px;
+  text-align: center;
+}
+/************************************************
+ * Widget Styling 
+ ***********************************************/
+.widget-area ul.socialLinks {
+  max-width: 230px;
+  padding: 1em 0;
+  margin: 0px auto;
+}
+.widget-area ul {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  display: table;
+  width: 100%;
+}
+.widget-area h3 {
+  margin-top: 10px;
+}
+.widget-area.three {
+  height: auto;
+  overflow: auto;
+  width: 100%;
+}
+.widget-area footer {
+  background: none;
+  padding: 0;
+}
+.socialLinks li {
+  display: table-cell;
+}
+ul.mode-locations {
+  margin: 2em 0;
+  padding: 0;
+}
+ul.mode-locations > li {
+  list-style: outside none none;
+  margin-bottom: 2em;
+}
+ul.mode-locations > li a {
+  display: inline-block;
+  padding-top: 1em;
+}
+ul.mode-locations > li img {
+  margin-bottom: 1em;
+}
+@media (max-width: 320px) {
+  body {
+    font-size: 12px;
+    line-height: 1.4857;
+  }
+  .navbar .navigation .navbar-header {
+    padding: 5px 0 5px 15px;
+    width: 70%;
+  }
+  .btn {
+    font-size: 12px;
+  }
+  body.page {
+    margin-top: 70px;
+  }
+  h1,
+  .h1 {
+    font-size: 26px;
+  }
+  h2,
+  .h2 {
+    font-size: 20px;
+  }
+  h3,
+  .h3 {
+    font-size: 18px;
+  }
+  .featurette .lead {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .navigation .navbar-header {
+    width: 50%;
+    padding-left: 15px;
+  }
+  .navbar-nav > li > a {
+    line-height: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+  body .navbar-toggle {
+    margin-bottom: 4px;
+    margin-right: 0;
+    margin-top: 16px;
+    padding: 9px 10px;
+  }
+  body.page {
+    margin-top: 65px;
+  }
+  body .carousel .carousel-caption {
+    display: none !important;
+  }
+  body .jumbotron .carousel-indicators {
+    bottom: -10px;
+  }
+  body .jumbotron .carousel-indicators li {
+    height: 10px;
+    margin: 1px;
+    width: 10px;
+  }
+  body .jumbotron .carousel-indicators .active {
+    height: 10px;
+    margin: 1;
+    width: 10px;
+  }
+  body .cta_widget.widget-text.wp_widget_plugin_box {
+    min-height: inherit;
+  }
+  .company-logo {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 640px) {
+  .col-md-5.content-col-side-odd {
+    float: none !important;
+  }
+  .col-md-7.content-col-main-odd {
+    float: none !important;
+  }
+  .row.acf-featurette {
+    text-align: center;
+  }
+  .row.acf-featurette .content-col-main {
+    margin-bottom: 3em;
+  }
+}
+@media (max-width: 768px) {
+  .col-sm-7.col-md-7.content-col-main {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .col-sm-7.col-md-7.content-col-main-odd {
+    margin-bottom: 2em;
+  }
+}
+@media (min-width: 768px) {
+  .acf-label .img-responsive {
+    float: left;
+  }
+}
+@media (min-width: 993px) {
+  ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block;
+  }
+}
+@media (max-width: 800px) {
+  body .navbar-fixed-top {
+    position: relative;
+  }
+  .navbar-header {
+    width: 40%;
+    padding-left: 15px;
+  }
+  body.page {
+    margin-top: auto;
+  }
+  .page-header {
+    margin: 1em 0;
+    padding-bottom: 0.643em;
+  }
+}
+@media (max-width: 980px) {
+  .jumbotron .carousel-caption {
+    padding: 1% 5%;
+  }
+  div#footer-widgets {
+    text-align: center;
+  }
+  .acf-label .img-responsive {
+    width: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .img-thumbnail.featurette-image {
+    margin: 2em 0 0;
+  }
+  hr.featurette-divider {
+    margin-bottom: 1em;
+  }
+}
+/* Specifications.php list styling */
+.specData {
+  display: block;
+  height: auto;
+  list-style: none outside none;
+  margin: 10px;
+  overflow: auto;
+}
+.specData a:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.boxListItem {
+  float: left;
+  height: 230px;
+  text-align: center;
+  width: 180px;
+}
+.boxListItem a {
+  display: block;
+  font-size: 10px;
+  line-height: 12px;
+}
+.box {
+  background-color: #CCCCCC;
+  border: 1px solid #CCCCCC;
+  height: auto;
+  margin: 0 auto 3px auto;
+  width: 100px;
+}
+.pdfImgUpload {
+  width: 100px;
+  height: auto;
+}
+.cta_widget.widget-text.wp_widget_plugin_box {
+  min-height: 300px;
+  position: relative;
+}
+.cta_widget.widget-text.wp_widget_plugin_box > footer {
+  bottom: 8px;
+  position: absolute;
+  width: 100%;
+}
