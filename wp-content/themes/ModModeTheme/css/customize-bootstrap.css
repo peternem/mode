@@ -1,5 +1,5 @@
 /**
- * Overrides for Wordpresss to improve integration xxx
+ * Overrides for Wordpresss to improve integration xxxxxxxx
  * 
  * @author Matthias Thom | http://upplex.de
  * @package upBootWP 0.1
@@ -32,16 +32,47 @@ body {
 .navbar-toggle {
   margin: 15px 0 0;
 }
+/**
+ * Post Alignments, captions block qoutes, etc
+ */
+.alignleft {
+  float: left;
+  margin: 0.375em 1.75em 1.75em 0;
+}
+.alignright {
+  float: right;
+  margin: 0.375em 0 1.75em 1.75em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto 1.75em;
+}
+.wp-caption-text {
+  font-style: italic;
+  padding: 1em;
+  text-align: center;
+}
+blockquote.alignleft {
+  margin: 0.3157894737em 1.4736842105em 1.473684211em 0;
+}
+blockquote.alignright {
+  margin: 0.3157894737em 0 1.473684211em 1.4736842105em;
+}
+blockquote.aligncenter {
+  margin-bottom: 1.473684211em;
+}
 /*********************************
  * ADMIN sTUFF
  ********************************/
 body.page.admin-bar .navbar {
   margin-top: 32px;
 }
-body.blog.admin-bar {
-  margin-top: 102px;
+body.blog.admin-bar .navbar {
+  margin-top: 32px;
 }
-body.page {
+body.page,
+body.blog {
   margin-top: 102px;
 }
 .comment-edit-link,
@@ -147,14 +178,36 @@ body.page {
 /*************************************************
  *  Customize WordPress CSS
  *************************************************/
-.archive .hfeed.site {
-  margin-top: 150px;
+@media (min-width: 1025px) {
+  .archive .hfeed.site {
+    margin-top: 150px;
+  }
 }
-.single .hfeed.site {
-  margin-top: 150px;
+@media (max-width: 1024px) {
+  .archive .hfeed.site {
+    margin-top: 30px;
+  }
 }
-.blog .hfeed.site {
-  margin-top: 150px;
+@media (min-width: 1025px) {
+  .single .hfeed.site {
+    margin-top: 150px;
+  }
+}
+@media (min-width: 781px) and (max-width: 1024px) {
+  .single .hfeed.site {
+    margin-top: 130px;
+  }
+}
+@media (max-width: 780px) {
+  .single .hfeed.site {
+    margin-top: 30px;
+  }
+}
+.blog .jumbotron.product-carousel {
+  margin-bottom: 5%;
+}
+.blog header {
+  margin-bottom: 5%;
 }
 .blog .post {
   margin-bottom: 60px;
@@ -163,6 +216,20 @@ body.page {
   display: block;
   height: auto;
   max-width: 100%;
+}
+.blog .entry-summary .wp-post-image {
+  margin-bottom: 5%;
+}
+.blog .entry-summary p {
+  line-height: 1.75;
+  margin-bottom: 5%;
+}
+.single-post .post header {
+  margin-bottom: 30px;
+}
+.single-post .entry-content > p {
+  line-height: 1.75;
+  margin-bottom: 30px;
 }
 .page-header {
   border-bottom: none;
@@ -198,7 +265,8 @@ body.page {
  *  Customize left/right Sidebar - Secondary section well
  *************************************************/
 #secondary.widget-area.well.well-sm {
-  margin-top: 20px;
+  margin-left: 60px;
+  margin-top: 30px;
 }
 /*************************************************
  *  Customize Featurettes
@@ -462,20 +530,16 @@ footer.footer {
 .socialLinks li {
   display: table-cell;
 }
-ul.mode-locations {
+.mode-locations {
   margin: 2em 0;
   padding: 0;
 }
-ul.mode-locations > li {
+.mode-locations > li {
   list-style: outside none none;
   margin-bottom: 2em;
 }
-ul.mode-locations > li a {
-  display: inline-block;
-  padding-top: 1em;
-}
-ul.mode-locations > li img {
-  margin-bottom: 1em;
+.mode-locations img {
+  margin-bottom: 15px;
 }
 @media (max-width: 320px) {
   body {
@@ -509,6 +573,10 @@ ul.mode-locations > li img {
   }
 }
 @media (max-width: 480px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .navigation .navbar-header {
     width: 50%;
     padding-left: 15px;
@@ -563,6 +631,11 @@ ul.mode-locations > li img {
   .row.acf-featurette .content-col-main {
     margin-bottom: 3em;
   }
+  img.alignright,
+  img.alignleft {
+    margin: 30px auto;
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .col-sm-7.col-md-7.content-col-main {
@@ -608,6 +681,13 @@ ul.mode-locations > li img {
   }
   .acf-label .img-responsive {
     width: 100%;
+  }
+  body.page,
+  body.blog {
+    margin-top: 0;
+  }
+  #secondary.widget-area.well.well-sm {
+    margin-left: 0px;
   }
 }
 @media (max-width: 1023px) {

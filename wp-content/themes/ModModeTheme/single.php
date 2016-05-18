@@ -6,7 +6,7 @@
  * @package upBootWP 0.1
  */
 get_header(); ?>
-	<div class="container not-found">
+	<div class="container">
 		<div class="row">
 			<div class="col-sm-8 col-md-8">
 				<div id="primary" class="content-area">

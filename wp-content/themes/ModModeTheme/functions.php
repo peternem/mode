@@ -306,60 +306,6 @@ register_sidebar( array(
 	'after_title' => '</h3>',
 ) );
 
-add_filter( 'default_content', 'custom_editor_content' );
-function custom_editor_content( $content ) {
-	global $current_screen;
-    if ( $current_screen->post_type == 'page') {
-	$content = '
-	<h3>DELETE THIS CONTENT IF NOT NEEDED</h3>
-	<div class="row featurette">
-		<div class="col-sm-7 col-md-7 content-col-main" >
-			<h2 class="featurette-heading">Skate ipsum dolor</h2>
-			<p class="lead">Skate ipsum dolor sit amet, 720 bone air layback kick-nose acid drop feeble. Camel back Eric Koston hip 540 kick-nose grab bluntslide. Darkslide pressure flip slob air wall ride wax hand rail.</p>
-			<p><a class="btn btn-primary" role="button" href="#">View details »</a></p>
-		</div>
-		<div class="col-sm-5 col-md-5 content-col-side"><img class="featurette-image img-responsive" alt="Generic placeholder image" src="http://placehold.it/470x350" /></div>
-	</div>
-<hr class="featurette-divider" />
-	<div class="row featurette">
-		<div class="col-sm-5 col-md-5 content-col-side-odd"><img class="featurette-image img-responsive" alt="Generic placeholder image" src="http://placehold.it/470x350" /></div>
-		<div class="col-sm-7 col-md-7 content-col-main-odd">
-			<h2 class="featurette-heading">Skate ipsum dolor</h2>
-			<p class="lead">Skate ipsum dolor sit amet, 720 bone air layback kick-nose acid drop feeble. Camel back Eric Koston hip 540 kick-nose grab bluntslide. Darkslide pressure flip slob air wall ride wax hand rail.</p>
-			<p><a class="btn btn-primary" role="button" href="#">View details »</a></p>
-		</div>
-	</div>
-<hr class="featurette-divider" />
-	<div class="row featurette">
-		<div class="col-sm-7 col-md-7 content-col-main" >
-			<h2 class="featurette-heading">Skate ipsum dolor</h2>
-			<p class="lead">Skate ipsum dolor sit amet, 720 bone air layback kick-nose acid drop feeble. Camel back Eric Koston hip 540 kick-nose grab bluntslide. Darkslide pressure flip slob air wall ride wax hand rail.</p>
-			<p><a class="btn btn-primary" role="button" href="#">View details »</a></p>
-		</div>
-		<div class="col-sm-5 col-md-5 content-col-side"><img class="featurette-image img-responsive" alt="Generic placeholder image" src="http://placehold.it/470x350" /></div>
-	</div>
-
-   ';
-} elseif ( $current_screen->post_type == 'post') {
-	$content = '
-	This is your main page content. Add Content Here!
-	<br>
-	<img src="http://placehold.it/750x325" />
-	<br>
-	This is your sidebar content. Add Content or Image Here!
-
-';
-} else {
-    $content = '
-
-       This is content. Add Content Here!
-		&nbsp;
-
-    ';
-}
-	return $content;
-}
-
 //remove inline width and height added to images
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
 add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );

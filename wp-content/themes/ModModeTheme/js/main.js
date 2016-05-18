@@ -69,10 +69,10 @@ jQuery(function() {
 	
 	function goToDivScroll(id){
 		// Scroll
-		jQuery('html,body').animate({scrollTop: $("#mrktg-content").offset().top-175}, 'slow');
+		jQuery('html,body').animate({scrollTop: $("#mrktg-content, #blog").offset().top-175}, 'slow');
 	}
 	
-	jQuery(".carousel-caption a[href=\"#mrktg-content\"]").click(function(e) { 
+	jQuery(".carousel-caption a[href=\"#mrktg-content\"]", ".carousel-caption a[href=\"#blog\"]").click(function(e) { 
 	  	// Prevent a page reload when a link is pressed
 		e.preventDefault(); 
 	  	// Call the scroll function

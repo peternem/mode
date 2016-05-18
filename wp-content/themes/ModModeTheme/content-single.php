@@ -8,7 +8,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-		<?php if(function_exists('the_subtitle')) the_subtitle( '<h2 class="subtitle">', '</h2>');?>
+		<?php if(function_exists('the_subtitle')) the_subtitle( '<p class="lead">', '</p>');?>
 
 		<div class="entry-meta">
 			<?php upbootwp_posted_on(); ?>
