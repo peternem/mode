@@ -41,7 +41,7 @@
 			<div class="row">
 				<div class="col-md-12 site-info">
 					<?php do_action( 'upbootwp_credits' ); ?>
-					&copy; <?php bloginfo('name'); ?> 2015
+					&copy; <?php bloginfo('name'); ?> <?php echo date("Y"); ?>
 					<span class="sep"> | </span>
 					<?php printf(__('Theme: %1$s by %2$s.', 'ModModeTheme' ), 'ModModeTheme', '<a href="http://mattpeternell.net" rel="designer">mpeternell</a>'); ?>
 				</div>
