@@ -9,7 +9,7 @@
  */
 ?>
 
-<section class="no-results not-found">
+<section class="no-results no-results">
 	<header class="page-header">
 		<h1 class="page-title"><?php _e( 'Nothing Found', 'upbootwp' ); ?></h1>
 	</header><!-- .page-header -->

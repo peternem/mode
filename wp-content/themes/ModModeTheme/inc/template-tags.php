@@ -247,3 +247,18 @@ function upbootwp_category_transient_flusher() {
 }
 add_action( 'edit_category', 'upbootwp_category_transient_flusher' );
 add_action( 'save_post',     'upbootwp_category_transient_flusher' );
+
+
+/**
+* Customize the WP Search form and added Bootstrap form classes.
+**/
+function my_search_form($form) {
+    $form = '<form class="form-inline my-search" role="search" method="get" id="searchform" action="' . home_url('/') . '" >
+            <input type="search" class="form-control" value="' . get_search_query() . '" name="s" id="s" placeholder="Search"/>
+                <button type="submit" class="my-search-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+    </form>';
+return $form;
+}
+add_filter('get_search_form', 'my_search_form');

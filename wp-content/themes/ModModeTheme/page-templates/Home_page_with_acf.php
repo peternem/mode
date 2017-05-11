@@ -12,7 +12,7 @@ get_header();
 <!-- Carousel ================================================== -->
 
 <div class="jumbotron">
-    <div id="myCarousel" class=" carousel slide container" data-ride="carousel" >
+    <div id="myCarousel" class=" carousel slide container" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -21,29 +21,11 @@ get_header();
             <li data-target="#myCarousel" data-slide-to="4"></li>
             <li data-target="#myCarousel" data-slide-to="5"></li>
             <li data-target="#myCarousel" data-slide-to="6"></li>
-            <li data-target="#myCarousel" data-slide-to="7"></li>
-            <li data-target="#myCarousel" data-slide-to="8"></li>
-            <li data-target="#myCarousel" data-slide-to="9"></li>
+<!--            <li data-target="#myCarousel" data-slide-to="7"></li>-->
+<!--            <li data-target="#myCarousel" data-slide-to="8"></li>-->
         </ol>
         <div class="carousel-inner">
             <div class="item active">
-                <img src="<?php header_image(); ?>" alt="Welcome to Mode Distributing" class="img-responsive">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <div class="row">
-                            <div class="col-xs-9 col-sm-10 col-md-10">
-                                <h1>Mode Distributing<?php //the_title();  ?></h1>
-                                <?php //if(function_exists('the_subtitle')) the_subtitle( '<p class="subtitle">', '</p>');?>
-                                <p class="subtitle">The premier home appliance distributor in the Western United States.</p>
-                            </div>
-                            <div class="col-xs-3 col-sm-2 col-md-2">
-                                <div class="btn-group"><a class="btn btn-sm btn-primary" href="#mrktg-content" role="button">Learn More &raquo;</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
                 <img src="<?php get_site_url(); ?>/wp-content/uploads/2014/11/mode_vah_hero_image_6.1.jpg" alt="Vent-A-Hood" class="img-responsive">
                 <div class="container">
                     <div class="carousel-caption">
@@ -60,7 +42,24 @@ get_header();
                 </div>
             </div>
             <div class="item">
-                <img src="<?php get_site_url(); ?>/wp-content/uploads/2013/11/mode_marvel_hero_image_8.1.jpg" alt="Marvel" class="img-responsive">
+                <img src="<?php header_image(); ?>" alt="AGA" class="img-responsive">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="row">
+                            <div class="col-xs-9 col-sm-10 col-md-10">
+                                <h1>AGA</h1>
+                                <p>Exceptional quality and style in high performance stoves, ovens, and ranges.</p>
+                            </div>
+                            <div class="col-xs-3 col-sm-2 col-md-2">
+                                <div class="btn-group"><a class="btn btn-sm btn-primary" href="#mrktg-content" role="button">Learn More &raquo;</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="<?php get_site_url(); ?>/wp-content/uploads/2017/02/mode_marvel_hero_image_8.1REVISED.jpg" alt="Marvel" class="img-responsive">
                 <div class="container">
                     <div class="carousel-caption">
                         <div class="row">
@@ -75,7 +74,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="item">
+<!--            <div class="item">
                 <img src="<?php get_site_url(); ?>/wp-content/uploads/2014/06/mode_lynx_hero_image_1_REVISED.jpg" alt="Lynx" class="img-responsive">
                 <div class="container">
                     <div class="carousel-caption">
@@ -90,8 +89,8 @@ get_header();
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="item">
+            </div>-->
+<!--            <div class="item">
                 <img src=" <?php get_site_url(); ?>/wp-content/uploads/2014/11/mode_sedona_hero_image_2.jpg" alt="Lynx" class="img-responsive">
                 <div class="container">
                     <div class="carousel-caption">
@@ -106,7 +105,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <div class="item">
                 <img src="<?php get_site_url(); ?>/wp-content/uploads/2014/06/hero_img_caliber_grill.jpg" alt="Lynx" class="img-responsive">
@@ -119,22 +118,6 @@ get_header();
                             </div>
                             <div class="col-xs-3 col-sm-2 col-md-2">
                                 <div class="btn-group"><a class="btn btn-sm btn-primary" href="<?php get_site_url(); ?>/product/caliber-appliances/" role="button">Visit Page &raquo;</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="<?php get_site_url(); ?>/wp-content/uploads/2014/06/mode_aga_hero_image_4.jpg" alt="AGA" class="img-responsive">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <div class="row">
-                            <div class="col-xs-9 col-sm-10 col-md-10">
-                                <h1>AGA</h1>
-                                <p>Exceptional quality and style in high performance stoves, ovens, and ranges.</p>
-                            </div>
-                            <div class="col-xs-3 col-sm-2 col-md-2">
-                                <div class="btn-group"><a class="btn btn-sm btn-primary" href="<?php get_site_url(); ?>/product/aga/" role="button">Visit Page &raquo;</a></div>
                             </div>
                         </div>
                     </div>
@@ -207,7 +190,6 @@ get_header();
         </div>
         <div class="row entry-content marketing">
             <div class="col-md-12">		
-
                 <?php the_content(); ?>
             <?php endwhile; // end of the loop. ?>
             <?php

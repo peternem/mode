@@ -316,6 +316,7 @@ function remove_thumbnail_dimensions( $html ) {
 	$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
 	return $html;
 }
+
 // Remove 'private' word from page title
 function the_title_trim($title) {
 	$title = esc_attr($title);
@@ -331,4 +332,35 @@ function the_title_trim($title) {
 	return $title;
 }
 add_filter('the_title', 'the_title_trim');
-?>
+
+
+function wpshock_search_filter( $query ) {
+    if ( $query->is_search ) {
+        $query->set( 'post_type', array('post','page') );
+    }
+    return $query;
+}
+add_filter('pre_get_posts','wpshock_search_filter');
+array('post','page', 'themes');
+
+
+//function wrap_embed_with_div($html, $url, $attr) {
+//     return '<div class="embed-container">' . $html . '</div>';
+//}
+// add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
+function div_wrapper($content) {
+    // match any iframes
+    $pattern = '~<iframe.*</iframe>|<embed.*</embed>~';
+    preg_match_all($pattern, $content, $matches);
+
+    foreach ($matches[0] as $match) {
+        // wrap matched iframe with div
+        $wrappedframe = '<div class="embed-container">' . $match . '</div>';
+
+        //replace original iframe with new in content
+        $content = str_replace($match, $wrappedframe, $content);
+    }
+
+    return $content;    
+}
+add_filter('the_content', 'div_wrapper');

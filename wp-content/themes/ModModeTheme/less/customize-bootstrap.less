@@ -1,5 +1,5 @@
 /**
- * Overrides for Wordpresss to improve integration xxxxxxxx
+ * xxxOverrides for Wordpresss to improve integration xxxxxxxx
  * 
  * @author Matthias Thom | http://upplex.de
  * @package upBootWP 0.1
@@ -12,6 +12,43 @@
 
 body {
     font-family: @font-family-sans-serif;
+}
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 4rem;
+    iframe,object,embed { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+} 
+
+
+
+
+.search-results .site-content {
+    padding-top: 5em;
+}
+
+
+.no-results {
+    padding: 19rem 0rem;
+}
+
+.search-results {
+    .content-area {
+        .page, .post {
+            margin-bottom: 4rem;
+        }
+    }    
 }
 .wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email {
     background-color: #ffffff;
@@ -58,13 +95,130 @@ body {
 }
 
 .company-logo {
-    max-width: 420px;
+
+    @media (min-width: 1025px) {
+        max-width: 420px;
+    }
+    @media (min-width: 961px) and (max-width: 1024px) {
+        max-width: 250px;
+        padding-top: 20px;
+    }
+    @media (min-width: 768px) and (max-width: 960px) {
+        max-width: 250px;
+    }
     width: 100%;
 }
 
 /*********************************
  * Header Area
  ********************************/
+
+.navbar .container {
+    width: 100%;
+    max-width: 1397px;
+}
+.mode-search.navbar-right {
+
+    @media (min-width: 1025px) {
+        padding: 32px 0 0;
+    }
+    @media (max-width: 1024px) and (orientation: portrait) {
+        padding: 0 0 30px;
+        .navbar-collapse.navbar-left.collapse.in + .mode-search.navbar-right {
+
+        }
+    }
+    @media (max-width: 1024px) and (orientation: landscape) {
+        padding: 32px 0 0;
+        .navbar-collapse.navbar-left.collapse.in + .mode-search.navbar-right {
+
+        }
+    }
+    @media (min-width: 768px) {
+        .form-inline .form-control {
+            max-width: 205px;
+            width: 100%;
+        }
+    }
+}
+
+.my-search {
+    position: relative;
+    max-width: 205px;
+    width: 100%;
+    button.my-search-btn {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+        border: 0;
+        bottom: 0;
+        color: gray;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+        @media (min-width: 1025px) {
+            padding: 0.65em 1.5em;
+        }
+        i.fa {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 10px;
+        }
+        &:hover {
+            background: rgba(0, 0, 0, 0.10);
+        }
+    }
+
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+    .navbar-collapse.navbar-left.collapse + .mode-search {
+        display: none;
+    }
+    .navbar-collapse.navbar-left.collapse.in + .mode-search {
+        display: block;
+    }
+    .navbar-collapse.navbar-left.collapse.in {
+        margin: 0;
+        padding: 0;
+    }
+    .navbar-collapse.navbar-left.collapse.in .navbar-nav {
+        margin: 15px 0;
+    }
+    .navbar-collapse.navbar-left.collapse.in + .mode-search.navbar-right {
+        padding: 0 0 30px 15px;
+    }
+}
+
+@media (max-width: 960px) {
+    .navbar-collapse.navbar-left.collapse + .mode-search {
+        display: none;
+    }
+    .navbar-collapse.navbar-left.collapse.in + .mode-search {
+        display: block;
+    }
+    .navbar-collapse.navbar-left.collapse.in {
+        margin: 0;
+        padding: 0;
+    }
+    .navbar-collapse.navbar-left.collapse.in .navbar-nav {
+        margin: 15px 0;
+    }
+    .navbar-collapse.navbar-left.collapse.in + .mode-search.navbar-right {
+        padding: 0 0 30px 15px;
+    }
+}
+
+
+.navbar-collapse.collapse.navbar-left {
+    @media (min-width: 1281px) {
+        margin: 25px 0 25px 20%;
+    }
+    @media (max-width: 1280px) {
+        margin: 25px 0 25px 10%;
+    }
+}
+
 .navbar {
     margin-bottom: 0;
     a.logo-link {
@@ -728,6 +882,10 @@ ul.socialLinks {
 }
 
 @media (max-width: 480px) {
+    .navbar .container {
+        padding-left: 15px; 
+        padding-right: 15px; 
+    }
     .container {
         padding-left: 30px;
         padding-right: 30px;
@@ -774,7 +932,7 @@ ul.socialLinks {
     }
 
     .company-logo {
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
 }

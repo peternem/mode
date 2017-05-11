@@ -23,8 +23,8 @@ if (is_front_page() && is_home()) {
     <div class="jumbotron product-carousel">
         <div id="myCarousel" class="carousel slide container" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
-                <div class="item active">
-                    <img alt="Second slide" class="img-responsive" src="http://modedistributing.com/wp-content/uploads/2016/04/MODE-News-and-Reviews.jpg"/>
+                <div class="item active">                    
+                    <img alt="Second slide" class="img-responsive" src="/wp-content/themes/ModModeTheme/images/Mode-News-and-Reviews-Hero-1024x439.png"/>
                     <div class="container">
                         <div class="carousel-caption">
                             <div class="row">

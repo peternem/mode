@@ -1,5 +1,5 @@
 /**
- * Overrides for Wordpresss to improve integration xxxxxxxx
+ * xxxOverrides for Wordpresss to improve integration xxxxxxxx
  * 
  * @author Matthias Thom | http://upplex.de
  * @package upBootWP 0.1
@@ -16,56 +16,198 @@
 body {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
 }
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 4rem;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.search-results .site-content {
+  padding-top: 5em;
+}
+.no-results {
+  padding: 19rem 0rem;
+}
+.search-results .content-area .page,
+.search-results .content-area .post {
+  margin-bottom: 4rem;
+}
 .wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email {
-    background-color: #ffffff;
-    background-image: none;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    color: #555555;
-    display: block;
-    font-size: 14px;
-    height: 34px;
-    line-height: 1.42857;
-    padding: 6px 12px;
-    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-    width: 100%;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: #555555;
+  display: block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
 }
 .wpcf7-form-control.wpcf7-submit {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    color: #333333; 
-    -moz-user-select: none;
-    background-image: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.42857;
-    margin-bottom: 0;
-    padding: 6px 12px;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #333333;
+  -moz-user-select: none;
+  background-image: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
 }
-
 .wpcf7-form-control.wpcf7-submit:hover {
-    background-color: #e6e6e6;
-    border-color: #adadad;
-    color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  color: #333333;
 }
 #secondary .widget {
-    margin-bottom: 45px;
+  margin-bottom: 45px;
 }
-
 .company-logo {
-  max-width: 420px;
   width: 100%;
+}
+@media (min-width: 1025px) {
+  .company-logo {
+    max-width: 420px;
+  }
+}
+@media (min-width: 961px) and (max-width: 1024px) {
+  .company-logo {
+    max-width: 250px;
+    padding-top: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 960px) {
+  .company-logo {
+    max-width: 250px;
+  }
 }
 /*********************************
  * Header Area
  ********************************/
+.navbar .container {
+  width: 100%;
+  max-width: 1397px;
+}
+@media (min-width: 1025px) {
+  .mode-search.navbar-right {
+    padding: 32px 0 0;
+  }
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+  .mode-search.navbar-right {
+    padding: 0 0 30px;
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  .mode-search.navbar-right {
+    padding: 32px 0 0;
+  }
+}
+@media (min-width: 768px) {
+  .mode-search.navbar-right .form-inline .form-control {
+    max-width: 205px;
+    width: 100%;
+  }
+}
+.my-search {
+  position: relative;
+  max-width: 205px;
+  width: 100%;
+}
+.my-search button.my-search-btn {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 0;
+  bottom: 0;
+  color: gray;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+}
+@media (min-width: 1025px) {
+  .my-search button.my-search-btn {
+    padding: 0.65em 1.5em;
+  }
+}
+.my-search button.my-search-btn i.fa {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.my-search button.my-search-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+  .navbar-collapse.navbar-left.collapse + .mode-search {
+    display: none;
+  }
+  .navbar-collapse.navbar-left.collapse.in + .mode-search {
+    display: block;
+  }
+  .navbar-collapse.navbar-left.collapse.in {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-collapse.navbar-left.collapse.in .navbar-nav {
+    margin: 15px 0;
+  }
+  .navbar-collapse.navbar-left.collapse.in + .mode-search.navbar-right {
+    padding: 0 0 30px 15px;
+  }
+}
+@media (max-width: 960px) {
+  .navbar-collapse.navbar-left.collapse + .mode-search {
+    display: none;
+  }
+  .navbar-collapse.navbar-left.collapse.in + .mode-search {
+    display: block;
+  }
+  .navbar-collapse.navbar-left.collapse.in {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-collapse.navbar-left.collapse.in .navbar-nav {
+    margin: 15px 0;
+  }
+  .navbar-collapse.navbar-left.collapse.in + .mode-search.navbar-right {
+    padding: 0 0 30px 15px;
+  }
+}
+@media (min-width: 1281px) {
+  .navbar-collapse.collapse.navbar-left {
+    margin: 25px 0 25px 20%;
+  }
+}
+@media (max-width: 1280px) {
+  .navbar-collapse.collapse.navbar-left {
+    margin: 25px 0 25px 10%;
+  }
+}
 .navbar {
   margin-bottom: 0;
 }
@@ -643,6 +785,10 @@ ul.socialLinks li a:hover {
   }
 }
 @media (max-width: 480px) {
+  .navbar .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .container {
     padding-left: 30px;
     padding-right: 30px;
@@ -685,7 +831,7 @@ ul.socialLinks li a:hover {
     min-height: inherit;
   }
   .company-logo {
-    margin-top: 5px;
+    margin-top: 10px;
   }
 }
 @media (max-width: 640px) {

@@ -28,7 +28,7 @@ jQuery(document).ready(function() {
 	carouselContainer.carousel({
 	    interval: slideInterval,
 	    cycle: true,
-	    pause: "hover"
+	    pause: "null"
 	}).on('slid.bs.carousel', function() {
 	    toggleCaption();
 	});
